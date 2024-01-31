@@ -29,10 +29,12 @@ class SoftTargetCrossEntropy_v2(nn.Module):
         else:
             return loss
         
+        
+
 class MHIM(nn.Module):
     def __init__(self, mlp_dim=512,mask_ratio=0,n_classes=2,temp_t=1.,temp_s=1.,dropout=0.25,act='relu',select_mask=True,select_inv=False,msa_fusion='vote',mask_ratio_h=0.,mrh_sche=None,mask_ratio_hr=0.,mask_ratio_l=0.,da_act='gelu',baseline='selfattn',head=8,attn_layer=0):
         super(MHIM, self).__init__()
- 
+
         self.mask_ratio = mask_ratio
         self.mask_ratio_h = mask_ratio_h
         self.mask_ratio_hr = mask_ratio_hr

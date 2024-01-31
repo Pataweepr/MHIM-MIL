@@ -709,7 +709,8 @@ def test(args,model,loader,device,criterion,model_tea=None):
     accuracy, auc_value, precision, recall, fscore = five_scores(bag_labels, bag_logit)
     test_loss_log = test_loss_log/len(loader)
 
-    return accuracy, auc_value, precision, recall, fscore,test_loss_log
+    return accuracy, auc_value, precision, recall, fscore, test_loss_log
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='MIL Training Script')
